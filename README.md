@@ -1,34 +1,79 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# NextJS - O que é? Qual a diferença? Quando usar?
 
-## Getting Started
+O NextJS é um Framework web desenvolvido em ReactJS.
 
-First, run the development server:
+**O que é um framework?**
 
-```bash
-npm run dev
-# or
-yarn dev
+Nada mais é que um sistema opinativo com estrutura e ferramentas já definidas.
+
+**O que o NextJS tem/faz?**
+
+- Renderização no servidor (Server Side Rendering - SSR);
+- Geração de estátios (Static Site Generation - SSG);
+- Css-in-JS (Styled-jsx, Styled Components, Emotion, etc);
+- Zero configuration (rotas, hot reloading, code splitting).
+
+# Tipos de uma aplicação:
+
+- Static Site (HTML/CSS/JS) - GatsbyJS, Hexo;
+- Client Side Rendering (Single Page Application - SPA) - Create React APP;
+- Server Side Rendering (SSR) - NextJs.
+
+**O NextJS tem suporte para SSG, SSR e SPA.**
+
+# Testes
+
+### Testes unitários:
+
+- Testam isoladamente pequenas unidades do código(como métodos);
+
+# Iniciando o projeto
+
+Para iniciarmos o projeto usamos o:
+
+```
+yarn create next-app our npx create next-app
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# Usando Typescript
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Para conseguirmos codar com typescript em um projeto next precisamos das seguintes configurações:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+Adicionar um arquivo tsconfig.json
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```
+touch tsconfig.json
+```
 
-## Learn More
+E instalar os types do node e do react para termos o autocomplete.
 
-To learn more about Next.js, take a look at the following resources:
+```
+yarn add --dev typescript @types/react
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# ESLINT
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Primeiro precisamos iniciar o eslint:
 
-## Deploy on Vercel
+```
+npx eslint --init
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# PRETTIER
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```
+yarn add --dev --exact prettier our npm install --dev --exact prettier
+```
+
+# JEST
+
+```
+yarn add --dev jest @babel/preset-typescript @types/jest
+
+yarn add --dev @testing-library/react @testing-library/jest-dom
+```
+
+# Styled-components
+
+yarn add --dev @types/styled-components babel-plugin-styled-components
+
